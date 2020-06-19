@@ -1,1 +1,9 @@
 /images/
+/.gitignore
+/bean/
+/bus/
+/controller/
+/dao/
+/main/
+/model/
+/view/

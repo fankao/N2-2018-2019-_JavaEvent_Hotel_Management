@@ -38,6 +38,7 @@ public class jdlDangNhap extends JDialog implements ActionListener {
 	private JButton btnLogin, btnCancel;
 	private JLabel pnTbao;
 	public static NhanVienLeTan nv;
+
 	public static void main(String[] args) {
 
 		try {
@@ -59,7 +60,7 @@ public class jdlDangNhap extends JDialog implements ActionListener {
 		setTitle("Đăng nhập hệ thống\r\n");
 		setSize(882, 412);
 		setLocationRelativeTo(null);
-		
+
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -75,7 +76,7 @@ public class jdlDangNhap extends JDialog implements ActionListener {
 		lblPass.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPass.setFont(new Font("Arial", Font.BOLD, 18));
 		btnLogin = new JButton("Đăng nhập");
-		
+
 		btnLogin.setIcon(new ImageIcon(jdlDangNhap.class.getResource("/images/icons8-enter-32.png")));
 		btnLogin.setFont(new Font("Arial", Font.BOLD, 18));
 		btnCancel = new JButton("Thoát");
@@ -148,20 +149,16 @@ public class jdlDangNhap extends JDialog implements ActionListener {
 		pnLogin.setLayout(gl_pnLogin);
 		JPanel pnLogo = new JPanel();
 		GroupLayout gl_contentPanel = new GroupLayout(contentPanel);
-		gl_contentPanel.setHorizontalGroup(
-			gl_contentPanel.createParallelGroup(Alignment.TRAILING)
+		gl_contentPanel.setHorizontalGroup(gl_contentPanel.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPanel.createSequentialGroup()
-					.addComponent(pnLogo, GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(pnLogin, GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE))
-		);
-		gl_contentPanel.setVerticalGroup(
-			gl_contentPanel.createParallelGroup(Alignment.LEADING)
+						.addComponent(pnLogo, GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+						.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(pnLogin, GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)));
+		gl_contentPanel.setVerticalGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
 				.addComponent(pnLogo, GroupLayout.PREFERRED_SIZE, 370, Short.MAX_VALUE)
 				.addGroup(gl_contentPanel.createSequentialGroup()
-					.addComponent(pnLogin, GroupLayout.PREFERRED_SIZE, 357, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-		);
+						.addComponent(pnLogin, GroupLayout.PREFERRED_SIZE, 357, GroupLayout.PREFERRED_SIZE)
+						.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
 		JLabel lblLogo = new JLabel("");
 		lblLogo.setIcon(new ImageIcon(jdlDangNhap.class.getResource("/images/2.png")));
@@ -192,7 +189,7 @@ public class jdlDangNhap extends JDialog implements ActionListener {
 					frmMain.lblTaiKhoan.setText(login.getTenNV());
 					nv = login;
 					frame.setVisible(true);
-					
+
 				} else {
 					pnTbao.setText("Đăng nhập không thành công kiểm tra lại tài khoản,mật khẩu");
 				}

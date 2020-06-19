@@ -642,6 +642,9 @@ public class jpnDangKiMot extends JDialog implements  ActionListener {
 		}
 
 	}
+	public static void main(String[] args) {
+		new jpnDangKiMot().setVisible(true);
+	}
 
 	
 }
